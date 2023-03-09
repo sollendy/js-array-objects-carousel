@@ -1,0 +1,50 @@
+#carosello {
+    position: relative;
+    width: 40%;
+}
+
+/* #carosello-cnt {
+    position: relative;
+} */
+
+#carosello img {
+    width: 100%;
+}
+
+#game-text{
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    color: white;
+}
+
+.frecce-cnt {
+    opacity: .6;
+}
+
+.frecce-cnt button {
+    border-radius: 50%;
+}
+
+.frecce {
+    /* background-color: grey; */
+    color: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frecciasx-cnt {
+    position: absolute;
+    left: 3px;
+    top: 240px;
+}
+
+#frecciadx-cnt {
+    position: absolute;
+    right: 3px;
+    top: 240px;
+}
