@@ -1,6 +1,6 @@
 //creo l'array di oggetti comprendente titoli, descrizioni e immagini
 //creo le variabili corrispondenti agli elementi html
-//dopo ciò creo una variabile indice che mi tenga il conto 
+//dopo ciò creo una variabile indice che mi tenga il conto
 //dopo aver cancellato gli elementi statici uso l'array fornito per popolare dinamicamente la parte dell'immagine
 //creo l'evento click in cui dico che al clic le immagini devono scorrere a seconda di quale freccia venga cliccata
 
@@ -39,21 +39,21 @@ let gameDesc = document.getElementById('carosel-actual-text');
 const frecciaSin = document.getElementById("frecciasx");
 const frecciaDes = document.getElementById('frecciadx');
 
-//dopo ciò creo una variabile indice che mi tenga il conto 
+//dopo ciò creo una variabile indice che mi tenga il conto
 let indice = 0;
 
 //dopo aver cancellato gli elementi statici uso l'array fornito per popolare dinamicamente la parte dell'immagine
 //faccio una verifica inserendo i primi elementi degli array
-immaginEl.src = images[indice].image;
-gameTitle.innerHTML = images[indice].title;
-gameDesc.innerHTML = images[indice].text;
+ immaginEl.src = images[indice].image;
+ gameTitle.innerHTML = images[indice].title;
+ gameDesc.innerHTML = images[indice].text;
 
 //creo l'evento click in cui dico che al clic le immagini devono scorrere a seconda di quale freccia venga cliccata
 //credo di dover fin da adesso cercare di impostarmi il codice in modo tale da ottenere un ciclo perpetuo
 
 frecciaDes.addEventListener('click', function() {
     //aumento il valore di indice cosicché gli elementi dell'array scorrano
-    indice++;
+    //indice++;
     //mostro l'elemento dell'array corrispondente a quel valore dell'indice
     immaginEl.src = images[indice].image;
     gameTitle.innerHTML = images[indice].title;
@@ -66,16 +66,17 @@ frecciaDes.addEventListener('click', function() {
     }
 });
 
+
 frecciaSin.addEventListener('click', function() {
     //aumento il valore di indice cosicché gli elementi dell'array scorrano
-    indice--;
+    //indice--;
     //mostro l'elemento dell'array corrispondente a quel valore dell'indice
     immaginEl.src = images[indice].image;
     gameTitle.innerHTML = images[indice].title;
     gameDesc.innerHTML = images[indice].text;
 
-    if(indice == images.length - 0) {
-        indice = - 1;
+    if(indice == 0) {
+        indice = images.length - 1;
     } else {
         indice--;
     }
