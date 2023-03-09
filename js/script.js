@@ -51,13 +51,32 @@ gameDesc.innerHTML = images[indice].text;
 //creo l'evento click in cui dico che al clic le immagini devono scorrere a seconda di quale freccia venga cliccata
 //credo di dover fin da adesso cercare di impostarmi il codice in modo tale da ottenere un ciclo perpetuo
 
-frecciaDes.addEventListener('click' function(){
+frecciaDes.addEventListener('click', function() {
     //aumento il valore di indice cosicché gli elementi dell'array scorrano
     indice++;
     //mostro l'elemento dell'array corrispondente a quel valore dell'indice
     immaginEl.src = images[indice].image;
     gameTitle.innerHTML = images[indice].title;
     gameDesc.innerHTML = images[indice].text;
-    console.log().
+
+    if(indice == images.length - 1) {
+        indice = 0;
+    } else {
+        indice++;
+    }
 });
 
+frecciaSin.addEventListener('click', function() {
+    //aumento il valore di indice cosicché gli elementi dell'array scorrano
+    indice--;
+    //mostro l'elemento dell'array corrispondente a quel valore dell'indice
+    immaginEl.src = images[indice].image;
+    gameTitle.innerHTML = images[indice].title;
+    gameDesc.innerHTML = images[indice].text;
+
+    if(indice == images.length - 0) {
+        indice = - 1;
+    } else {
+        indice--;
+    }
+});
