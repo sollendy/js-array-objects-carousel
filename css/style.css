@@ -26,6 +26,10 @@
     border-radius: 50%;
 }
 
+.frecce-cnt button:hover {
+    opacity: 2;
+}
+
 .frecce {
     /* background-color: grey; */
     color: black;
